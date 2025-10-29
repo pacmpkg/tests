@@ -8,6 +8,9 @@ The `pacm` testing suite is organized as integration tests within the `tests/` d
 
 ## Test Structure
 
+- `common/mod.rs` - Shared utilities and helpers for the test modules
+- `cas_store.rs` - Tests for the content-addressable storage (CAS) functionality
+- `fast_install.rs` - Tests for the fast installation algorithm
 - `lockfile.rs` - Tests for lockfile serialization, deserialization, and synchronization with manifests
 - `manifest.rs` - Tests for package manifest (package.json) reading and writing
 - `resolver.rs` - Tests for semantic version range resolution and npm-style range parsing
@@ -24,6 +27,8 @@ cargo test
 To run specific test modules:
 
 ```bash
+cargo test --test cas_store
+cargo test --test fast_install
 cargo test --test lockfile
 cargo test --test manifest
 cargo test --test resolver
