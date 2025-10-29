@@ -3,10 +3,7 @@ use pacm::resolver::canonicalize_npm_range;
 #[test]
 fn test_basic_wildcards() {
     assert_eq!(canonicalize_npm_range("*"), "*");
-    assert_eq!(
-        canonicalize_npm_range("1.x"),
-        ">=1.0.0, <2.0.0".replace("  ", " ")
-    );
+    assert_eq!(canonicalize_npm_range("1.x"), ">=1.0.0, <2.0.0".replace("  ", " "));
     assert_eq!(canonicalize_npm_range("1.2.x"), ">=1.2.0, <1.3.0");
 }
 

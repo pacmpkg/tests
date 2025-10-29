@@ -36,6 +36,10 @@ fn encode_decode_roundtrip() {
         )]),
         os: vec![String::from("linux")],
         cpu_arch: vec![String::from("x64")],
+        store_key: None,
+        content_hash: None,
+        link_mode: None,
+        store_path: None,
     };
     lf.packages.insert(String::from(""), entry.clone());
     entry.version = Some("0.0.1".into());
