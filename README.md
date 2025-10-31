@@ -1,3 +1,9 @@
+> [!WARNING]
+> **Deprecation Notice**
+>
+> This test suite has been **deprecated** and is now maintained directly in the main [`pacm`](https://github.com/pacmpkg/pacm) repository at  
+> [`pacm/src/tests`](https://github.com/pacmpkg/pacm/tree/main/src/tests).
+
 # Pacm Testing Suite
 
 This directory contains the comprehensive testing suite for the `pacm` package manager. As part of the main `pacm` repository, these tests ensure the reliability and correctness of all core functionality.
@@ -48,5 +54,6 @@ The testing suite covers:
 All tests use the `pacm` library as an external dependency, ensuring they validate the public API and integration points.
 
 ## Adding New Tests
+
 
 When adding new functionality to `pacm`, corresponding tests should be added to the appropriate test file in this directory. For unit tests of internal modules, consider adding them directly to the source files with `#[cfg(test)]` blocks.
